@@ -31,9 +31,14 @@ Then, start the backend with:
 docker compose up --build
 ```
 
-You will need to insert your Nomic API Key (giving your access to the Atlas Embedding Database) into the [settings file](backend/app/api_v1/settings.py) or the docker compose
+You will need to insert your Nomic API Key (giving your app access to your Atlas Embedding Database instance) into the [settings file](backend/app/api_v1/settings.py) or the docker compose
 environment variables.
 You can find this API Key by making an [Atlas](atlas.nomic.ai/cli-login) account.
+
+
+### Uploading your content to Atlas
+
+Once you
 
 
 ## Viewing your Apps API Documentation
