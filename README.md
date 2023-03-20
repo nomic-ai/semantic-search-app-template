@@ -51,9 +51,8 @@ Run `docker compose up` to spin up the backend. Monitor the logs for errors in-c
 
 ### Testing your vector search functionality
 
-Once the FastAPI is started you can access its documentation and test the search endpoint by going to:
+Once the FastAPI ap is started you can access its documentation and test the search endpoint by going to:
 ```
 localhost:80/docs
 ```
-Click 
 
