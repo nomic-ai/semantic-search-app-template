@@ -35,13 +35,16 @@ You will need to insert your Nomic API Key (giving your app access to your Atlas
 environment variables](docker-compose.yaml).
 You can find this API Key by making an [Atlas](atlas.nomic.ai/cli-login) account.
 
-#### Uploading your content to Atlas
+#### Uploading and indexing your content in Atlas
 
 We will use demo news data in this tutorial. To upload the demo data go through the [Content Upload Tutorial](tutorial/semantic_search_data_upload.ipynb).
 
 This tutorial stores your data in an Atlas Embedding DB project called '10k News Articles'.
 
-You should paste this string as an environment variable into the [settings file](backend/app/api_v1/settings.py) for the variable `atlas_project_name`.
+You should paste this string into the [settings file](backend/app/api_v1/settings.py) under the environment variable `atlas_project_name`.
+
+
+#### Spinning up your app
 
 
 ## Viewing your Apps API Documentation

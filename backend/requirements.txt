@@ -7,3 +7,4 @@ fastapi>=0.95.0
 Jinja2>=3.0
 nomic
 openai
+langchain

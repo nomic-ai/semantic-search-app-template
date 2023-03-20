@@ -2,11 +2,13 @@ import os
 import docs
 import logging
 import nomic
+from nomic import AtlasProject
 from fastapi import FastAPI, HTTPException, Request
 from starlette.middleware.cors import CORSMiddleware
 from fastapi.logger import logger as fastapi_logger
 from api_v1.settings import settings
 from api_v1.api import router as v1_router
+from api_v1.routes.search import load_atlas_project
 from api_v1 import events
 
 logger = logging.getLogger(__name__)
@@ -33,10 +35,13 @@ app.add_event_handler('startup', events.startup_event_handler(app))
 app.add_exception_handler(HTTPException, events.on_http_error)
 
 #handlers to do things on start-up, shutdown
-
+global atlas_project
+atlas_project = None
 @app.on_event("startup")
 async def startup():
-    nomic.login(token=settings.nomic_api_key)
+    #load an configure the atlas project here so we do not load it on every query
+    global atlas_project
+    await load_atlas_project()
     logger.info("Successfully connected to Atlas")
 
 

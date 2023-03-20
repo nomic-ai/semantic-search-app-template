@@ -1,6 +1,8 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 app/__pycache__/
+backend/__pycache__/
+backend/app/api_v1/__pycache__/
 *.py[cod]
 *$py.class
 
