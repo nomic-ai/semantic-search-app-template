@@ -39,8 +39,14 @@ global atlas_project
 atlas_project = None
 @app.on_event("startup")
 async def startup():
+    if settings.atlas_project_name == '':
+        raise ValueError(f"You must set an atlas_project_name environment variable in settings.py")
+
+    if settings.openai_api_key == '':
+        raise ValueError(f"You must set an openai_api_key environment variable in settings.py")
+
+    nomic.login(token=settings.nomic_api_key)
     #load an configure the atlas project here so we do not load it on every query
-    global atlas_project
     await load_atlas_project()
     logger.info("Successfully connected to Atlas")
 

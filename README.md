@@ -41,15 +41,19 @@ We will use demo news data in this tutorial. To upload the demo data go through 
 
 This tutorial stores your data in an Atlas Embedding DB project called '10k News Articles'.
 
-You should paste this string into the [settings file](backend/app/api_v1/settings.py) under the environment variable `atlas_project_name`.
+You should paste this project name into the [settings file](backend/app/api_v1/settings.py) under the environment variable `atlas_project_name`. Additionally,
+paste in your OpenAI API key into the settings file.
 
 
 #### Spinning up your app
+Run `docker compose up` to spin up the backend. Monitor the logs for errors in-case you forgot to set an environment variable above.
 
 
-## Viewing your Apps API Documentation
+### Testing your vector search functionality
 
-Once the app is started you can access its documentation and test its endpoint by going to:
+Once the FastAPI is started you can access its documentation and test the search endpoint by going to:
 ```
 localhost:80/docs
 ```
+Click 
+
