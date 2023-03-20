@@ -17,6 +17,7 @@ Atlas allow you to upload your content (text documents, embeddings) and instantl
 allowing you to see the types of results your semantic search app will generate for any query.
 
 
+## Tutorial
 
 ### Starting the app
 
