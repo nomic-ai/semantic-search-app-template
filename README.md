@@ -39,7 +39,8 @@ You can find this API Key by making an [Atlas](atlas.nomic.ai/cli-login) account
 
 We will use demo news data in this tutorial. To upload the demo data go through the [Content Upload Tutorial](tutorial/semantic_search_data_upload.ipynb).
 
-This tutorial produces stores your data in an Atlas Embedding DB project called '10k News Articles'.
+This tutorial stores your data in an Atlas Embedding DB project called '10k News Articles'.
+
 You should paste this string as an environment variable into the [settings file](backend/app/api_v1/settings.py) for the variable `atlas_project_name`.
 
 
