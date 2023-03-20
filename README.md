@@ -13,8 +13,8 @@ To build a semantic search powered app, you used to need:
 
 This app template simplifies the process by providing a ready to deploy FastAPI and React app that interfaces with the [Atlas Embedding Database](https://docs.nomic.ai/how_does_atlas_work.html).
 
-Atlas allow you to load your content (text documents, embeddings) and instantly access semantic search over your data. Additionally, it comes built with a visual debugger
-that allows you to see the types of results your semantic search app will generate for any query.
+Atlas allow you to upload your content (text documents, embeddings) and instantly access semantic search over your data. Additionally, Atlas comes built with a visual debugger
+allowing you to see the types of results your semantic search app will generate for any query.
 
 
 
