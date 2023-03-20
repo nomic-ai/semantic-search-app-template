@@ -1,4 +1,4 @@
-# Building a Semantic Search Powered App with Atlas
+# Building a Semantic Search Powered App
 Tutorial and template for a semantic search app powered by the Atlas Embedding Database and FastAPI. 
 Optional integrations include the OpenAI Embedding API and Langchain.
 
