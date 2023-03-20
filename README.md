@@ -20,7 +20,7 @@ allowing you to see the types of results your semantic search app will generate 
 
 ### Starting the app
 
-First build the FastAPI docker image. You only have to do this once and when you add new dependencies to the requirements.txt file:
+First build the FastAPI docker image. You only have to do this on initial build or when you add new dependencies to the requirements.txt file:
 ```bash
 DOCKER_BUILDKIT=1 docker build -t backend_api --progress plain -f backend/Dockerfile.buildkit .
 ```
@@ -31,14 +31,16 @@ Then, start the backend with:
 docker compose up --build
 ```
 
-You will need to insert your Nomic API Key (giving your app access to your Atlas Embedding Database instance) into the [settings file](backend/app/api_v1/settings.py) or the docker compose
-environment variables.
+You will need to insert your Nomic API Key (giving your app access to your Atlas Embedding Database instance) into the [settings file](backend/app/api_v1/settings.py) or the [docker compose
+environment variables](docker-compose.yaml).
 You can find this API Key by making an [Atlas](atlas.nomic.ai/cli-login) account.
 
+#### Uploading your content to Atlas
 
-### Uploading your content to Atlas
+We will use demo news data in this tutorial. To upload the demo data go through the [Content Upload Tutorial](tutorial/semantic_search_data_upload.ipynb).
 
-Once you
+This tutorial produces stores your data in an Atlas Embedding DB project called '10k News Articles'.
+You should paste this string as an environment variable into the [settings file](backend/app/api_v1/settings.py) for the variable `atlas_project_name`.
 
 
 ## Viewing your Apps API Documentation
