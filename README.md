@@ -6,14 +6,14 @@ Optional integrations include the OpenAI Embedding API and Langchain.
 ### Getting started
 The typical process for building a semantic search app includes:
 1. Gathering a dataset of text, images or other content you want your app to search through.
-2. Generate [embeddings](https://vaclavkosar.com/ml/Embeddings-in-Machine-Learning-Explained) of your data. This is usually done using an Embedding API such as Cohere or OpenAI.
-3. Write code that performs vector similarity search over your embeddings and returns back your content.
-4. Integrate all of this into a back-end which you can hit over a REST API.
+2. Generating [embeddings](https://vaclavkosar.com/ml/Embeddings-in-Machine-Learning-Explained) of your data. This is usually done using an Embedding API such as Cohere or OpenAI.
+3. Writing code that performs vector similarity search over your embeddings and returns back your content.
+4. Integrating all of this into a back-end which you can hit over a REST API.
 
 
 This app template simplifies the process by providing a ready to deploy FastAPI and React app that interfaces with the [Atlas Embedding Database](https://docs.nomic.ai/how_does_atlas_work.html).
 
-Atlas allow you to upload your content (text documents, embeddings) and instantly access semantic search over your data. Additionally, Atlas comes built with a visual debugger
+Atlas allow you to upload your content (text documents, embeddings) and instantly access semantic search over your data. Importantly, Atlas comes built with a visual debugger
 allowing you to see the types of results your semantic search app will generate for any query.
 
 
@@ -25,14 +25,18 @@ First build the FastAPI docker image. You only have to do this once and when you
 DOCKER_BUILDKIT=1 docker build -t backend_api --progress plain -f backend/Dockerfile.buildkit .
 ```
 
-Then, start the app:
+Then, start the backend with:
 
 ```bash
 docker compose up --build
 ```
 
+You will need to insert your Nomic API Key (giving your access to the Atlas Embedding Database) into the [settings file](backend/app/api_v1/settings.py) or the docker compose
+environment variables.
+You can find this API Key by making an [Atlas](atlas.nomic.ai/cli-login) account.
 
-## API Documentation
+
+## Viewing your Apps API Documentation
 
 Once the app is started you can access its documentation and test its endpoint by going to:
 ```
