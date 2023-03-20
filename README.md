@@ -57,3 +57,7 @@ Once the FastAPI ap is started you can access its documentation and test the sea
 localhost:80/docs
 ```
 
+
+### Serving the front end
+The front-end is not implemented yet for this tutorial. Make a PR that builds a React App and we will merge it!
+
