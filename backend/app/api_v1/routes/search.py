@@ -31,7 +31,7 @@ async def semantic_search(query: str, num_results: int = 10):
 
     atlas_semantic_search = atlas_project.maps[0]
 
-    #get the emebding for the query with open ai
+    #get the embedding for the query with open ai
     openai = OpenAIEmbeddings(openai_api_key=settings.openai_api_key, model='text-embedding-ada-002')
     query = np.array(openai.embed_documents(texts=[query]))
 
